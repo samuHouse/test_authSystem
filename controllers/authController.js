@@ -28,16 +28,18 @@ exports.register = (req, res) => {
                 res.status(400).send('Errore durante la registrazione.');
             }
         }
-        else res.send(`Utente creato con successo.`);
-        // Crezione JWT.
-        const token = jwt.sign({ id: this.lastID, username }, SECRET, { expiresIn: '1h' });
-        // Invio tramite cookie http.
-        res.cookie("token", token, {
-            httpOnly: true,
-            secure: false,
-            sameSite: "lax"
-        });
-        mailer.sendWelcomeEmail(email);
+        else {
+            // Crezione JWT.
+            const token = jwt.sign({ id: this.lastID, username }, SECRET, { expiresIn: '1h' });
+            // Invio tramite cookie http.
+            res.cookie("token", token, {
+                httpOnly: true,
+                secure: false,
+                sameSite: "lax"
+            });
+            mailer.sendWelcomeEmail(email);
+            res.send('Registrazione avvenuta con successo.');
+        }
     });
 };
 

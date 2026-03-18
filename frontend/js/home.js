@@ -1,7 +1,7 @@
 // fetch dello username attuale per precompilare il titolo.
 window.addEventListener('DOMContentLoaded', async () => {
   try {
-    const res = await fetch('://localhost:3000/user/profile', {
+    const res = await fetch('http://localhost:3000/user/profile', {
       method: 'GET',
       credentials: 'include'
     });
