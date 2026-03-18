@@ -1,0 +1,77 @@
+body {
+  font-family: OCR A Std, monospace;
+  font-style: bold;
+  margin: 50px;
+  background-color: #333;
+  text-align: center;
+  color:#ffffff;
+  font-size: large;
+}
+
+@media (min-width: 800px) {
+  body {
+    width: 33%;
+    margin-left: 33%;
+  }
+}
+
+form {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+form label {
+  display: block;
+}
+
+form input {
+  display: block;
+  width: 200px;
+  margin-top: 15px;
+}
+
+input {
+  font-family: OCR A Std, monospace;
+  padding: 5px;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid rgb(9, 182, 64);
+}
+
+button {
+  padding: 2% 3.5%;
+  font-size: large;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  transition: padding 0.3s ease;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  color: rgb(9, 182, 64);
+  cursor: pointer;
+  padding: 2.5% 4%; 
+}
+
+a {
+  display: block;
+  color:rgb(9, 182, 64);
+  margin: 15px;
+}
+
+a:hover {
+  color: rgb(84, 49, 119);
+  cursor: pointer;
+}
+
+img {
+  width: 200px;
+  margin-top: 20px;
+  border-radius: 100%;
+}

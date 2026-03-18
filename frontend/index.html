@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Somesite</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <h1>Somesite</h1>
+  <h2>Login</h2>
+  <form id="loginForm">
+    <label>Email:<input type="email" id="email" required></label>
+    <label>Password:<input type="password" id="password" required></label>
+    <button type="submit">Login</button>
+  </form>
+  <!-- placeholder per mostrare i messaggi dal server -->
+  <p id="result"></p>
+  <a href="/register.html">Non hai un account? Registrati</a>
+  <a href="/forgot-password.html">Hai dimenticato la password?</a>
+  <!-- logica in js -->
+  <script src="/js/login.js"></script>
+</body>
+</html>
