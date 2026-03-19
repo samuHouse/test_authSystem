@@ -18,7 +18,7 @@ Il database è inizializzato vuoto e ha la seguente struttura: unica tabella `ut
 
 Le dipendenze del sistema sono *NodeJs* e *SQLite*.
 
-[Download SQLite](https://sqlite.org/download.html), per Windows consiglio la versione "sqlite-tools-win-x64-3510300.zip".
+[Download SQLite](https://sqlite.org/download.html), per Windows consiglio la versione "sqlite-tools-win-x64-3510300.zip".  
 [Download NodeJs](https://nodejs.org/en/download).
 
 La creazione del DB avviene tramite il comando `sqlite3 [database].db`, in seguito si può incollare lo script fornito nel file `init_db.sql`.
@@ -28,10 +28,10 @@ Se si ha GitBash si può anche usare un redirect:
 
 il file .env va configurato con le seguenti variabili:
 
-PORT=3000
-DB_PATH=./database_sqlite.db
-JWT_SECRET=chiave_JWT
-EMAIL_USER=e-mail_per_notifiche
+PORT=3000  
+DB_PATH=./database_sqlite.db  
+JWT_SECRET=chiave_JWT  
+EMAIL_USER=e-mail_per_notifiche  
 EMAIL_PASS=password_per_app_Google
 
 Una volta creato il DB si inserisce il percorso del file nel file `.env`.
@@ -46,12 +46,12 @@ Si avvia il server lanciando il comando `node ./index.js` sempre all'interno del
 
 Infine il servizio web sarà accessibile all'url <http://localhost:3000> (porta di default, si può cambiare in env).
 
-Le API esposte sono:
-POST /register
-POST /login
-POST /reset-password
-POST /forgot-password
-POST /user/edit
+Le API esposte sono:  
+POST /register  
+POST /login  
+POST /reset-password  
+POST /forgot-password  
+POST /user/edit  
 GET  /user/profile
 
 consultabili nelle cartelle `routes/` e `controller/`.
